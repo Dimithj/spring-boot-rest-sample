@@ -1,4 +1,4 @@
-package org.demo.restdemo.domain;
+package org.samples.springbootrestsample.domain;
 
 import java.util.UUID;
 

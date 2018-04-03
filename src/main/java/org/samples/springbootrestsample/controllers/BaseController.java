@@ -1,4 +1,4 @@
-package org.demo.restdemo.controllers;
+package org.samples.springbootrestsample.controllers;
 
 public class BaseController {
 

@@ -1,4 +1,4 @@
-package org.demo.restdemo.controllers;
+package org.samples.springbootrestsample.controllers;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
@@ -9,7 +9,7 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.demo.restdemo.domain.Product;
+import org.samples.springbootrestsample.domain.Product;
 import org.springframework.hateoas.Resources;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +26,7 @@ public class ProductController extends BaseController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
-
+	
 	Product create(@RequestBody Product product) {
 
 		product.add(linkTo(methodOn(ProductController.class).get(product.getProductId())).withSelfRel());
