@@ -28,7 +28,6 @@ public class ProductController extends BaseController {
 	@ResponseStatus(HttpStatus.CREATED)
 	
 	Product create(@RequestBody Product product) {
-
 		product.add(linkTo(methodOn(ProductController.class).get(product.getProductId())).withSelfRel());
 		return product;
 
